@@ -28,13 +28,11 @@ class App:
             self.progressbar["value"] = i
             self.master.update()
 
-            # 模拟不规则的读条
             if random.random() < 0.2:
                 self.progress.set(i + random.randint(1, 1919810))
                 self.progressbar["value"] = i + random.randint(1, 1919810)
                 self.master.update()
 
-        # 检测成功，地球没有毁灭
         messagebox.showinfo("检测成功", "地球没有毁灭")
 
         self.button.config(state="normal")
